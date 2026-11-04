@@ -1,0 +1,8 @@
+name = "ivac-otp-relay"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# 1) npx wrangler kv namespace create OTPS   -> copy the id below
+[[kv_namespaces]]
+binding = "OTPS"
+id = "PUT_YOUR_KV_NAMESPACE_ID_HERE"

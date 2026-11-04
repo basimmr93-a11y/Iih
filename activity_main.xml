@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="16dp">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="IVAC OTP Autofill" android:gravity="center" android:textSize="22sp"
+        android:textStyle="bold" android:textColor="@color/amber" android:paddingBottom="14dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="@color/card" android:padding="14dp">
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="16sp" android:textStyle="bold" android:text="Not paired yet" />
+        <TextView android:id="@+id/statusSub" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/muted" android:text="Save the pairing below and allow SMS access." />
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Pairing" android:textSize="16sp" android:textStyle="bold" android:paddingTop="18dp" android:paddingBottom="8dp" />
+    <EditText android:id="@+id/phone" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Phone number (this SIM)" android:inputType="phone" android:singleLine="true" />
+    <EditText android:id="@+id/key" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Client key (from the extension)" android:inputType="textCapCharacters|textNoSuggestions" android:singleLine="true" />
+    <EditText android:id="@+id/relay" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Relay URL (https://….workers.dev)" android:inputType="textUri" android:singleLine="true" />
+    <Button android:id="@+id/save" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="SAVE PAIRING" android:backgroundTint="@color/amber" android:textColor="#1A1200" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Manual / test" android:textSize="16sp" android:textStyle="bold" android:paddingTop="18dp" android:paddingBottom="8dp" />
+    <EditText android:id="@+id/manual" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Paste an OTP SMS or a code" android:minLines="2" android:gravity="top" />
+    <Button android:id="@+id/forward" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="FORWARD" android:backgroundTint="@color/amber" android:textColor="#1A1200" />
+    <Button android:id="@+id/test" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Send a test push (000000)" style="?android:attr/borderlessButtonStyle" android:textColor="@color/amber" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Recent activity" android:textSize="16sp" android:textStyle="bold" android:paddingTop="12dp" android:paddingBottom="6dp" />
+    <TextView android:id="@+id/log" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="@color/muted" android:text="Nothing yet — forwarded codes will appear here." />
+</LinearLayout>
+</ScrollView>
